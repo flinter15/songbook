@@ -1,0 +1,6 @@
+- unless signed_in?
+  = link_to t('layouts.header.sign_in_link'), new_user_session_path
+  = link_to t('layouts.header.register_link'), new_user_registration_path
+- else
+  = link_to t('layouts.header.sign_out_link'), destroy_user_session_path, method: :delete
+  = link_to t('layouts.header.dashboard_link'), user_path(current_user)

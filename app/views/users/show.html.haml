@@ -1,0 +1,12 @@
+%h1= @user.username
+
+%h2= t('users.show.songs_title')
+
+.song_list
+  - @user.songs.each do |s|
+    .song
+      = s.title
+  - if @user.songs.length == 0
+    %p= t('users.show.empty_songs')
+
+=link_to t('users.show.add_song_link'), new_user_song_path(@user)
