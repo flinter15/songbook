@@ -16,4 +16,4 @@
 /tmp
 
 # Ignore IDE settings
-.idea/*.*
+/.idea
